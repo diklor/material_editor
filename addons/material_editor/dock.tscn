@@ -1,0 +1,692 @@
+[gd_scene load_steps=10 format=3 uid="uid://dk0de8t86hkrx"]
+
+[ext_resource type="Script" path="res://addons/material_editor/dock.gd" id="1_cxyog"]
+[ext_resource type="Script" path="res://addons/material_editor/reset_button.gd" id="2_ufe5u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4girr"]
+content_margin_left = 22.0
+
+[sub_resource type="Image" id="Image_5jqtf"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_xuwnn"]
+image = SubResource("Image_5jqtf")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xgxd8"]
+content_margin_left = 22.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_letxw"]
+content_margin_left = 14.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.215686, 0.215686, 0.215686, 1)
+border_width_left = 325
+border_width_top = 4
+border_width_right = 40
+border_width_bottom = 4
+border_color = Color(0.32549, 0.32549, 0.32549, 1)
+border_blend = true
+
+[sub_resource type="ImageTexture" id="ImageTexture_c51gv"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_njxyl"]
+
+[node name="Material Editor" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -707.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cxyog")
+
+[node name="mode" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="mode"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="mode/vbox"]
+layout_mode = 2
+
+[node name="label" type="Label" parent="mode/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4girr")
+text = "Mode"
+
+[node name="reset" type="Button" parent="mode/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 10
+icon = SubResource("ImageTexture_xuwnn")
+flat = true
+script = ExtResource("2_ufe5u")
+
+[node name="_vsep" type="VSeparator" parent="mode/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="buttons_hbox" type="HBoxContainer" parent="mode/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.3
+
+[node name="selected_objects" type="Button" parent="mode/vbox/hbox/buttons_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_pressed = true
+text = "Selected objects"
+clip_text = true
+
+[node name="file" type="Button" parent="mode/vbox/hbox/buttons_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "From file"
+clip_text = true
+
+[node name="folders" type="Button" parent="mode/vbox/hbox/buttons_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Folders"
+clip_text = true
+
+[node name="folders_and_descendants" type="Button" parent="mode/vbox/hbox/buttons_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Folders and descendants"
+clip_text = true
+
+[node name="path" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="path"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="path/vbox"]
+layout_mode = 2
+
+[node name="label" type="Label" parent="path/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4girr")
+text = "Path(s)"
+
+[node name="reset" type="Button" parent="path/vbox/hbox"]
+layout_mode = 2
+icon = SubResource("ImageTexture_xuwnn")
+flat = true
+script = ExtResource("2_ufe5u")
+
+[node name="_vsep" type="VSeparator" parent="path/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="line_edit" type="LineEdit" parent="path/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+placeholder_text = "res://materials_folder or res://material.tres"
+alignment = 1
+
+[node name="expand_tip" type="Button" parent="path/vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 8
+toggle_mode = true
+text = "▼"
+
+[node name="label" type="RichTextLabel" parent="path/vbox"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xgxd8")
+bbcode_enabled = true
+text = "Selected objects example (In the Scene Tree):  MeshInstance3D, CSGBox3D (or any CSG Shape)  (Only heirs of GeometryInstance3D will be chosen)
+
+Folders example:  \"res://materials; res://map/materials\"  (Slash at the end is optional)
+
+Folders and descendants example:  \"res://material_pack\", \"res://map/meshes_and_materials/\"  (Only materials will be chosen)
+
+Materials example:  \"res://materials/mat1.tres; res://materials/mat2.tres\"
+
+(   Multiple paths are separated by ;  )"
+fit_content = true
+selection_enabled = true
+
+[node name="vsplit" type="VSplitContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+split_offset = 70
+
+[node name="bg" type="Panel" parent="vsplit"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="scroll" type="ScrollContainer" parent="vsplit/bg"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 7
+
+[node name="margin" type="MarginContainer" parent="vsplit/bg/scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="box" type="VBoxContainer" parent="vsplit/bg/scroll/margin"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="_theme1" type="Label" parent="vsplit/bg/scroll/margin/box"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_letxw")
+text = "Appearance"
+vertical_alignment = 1
+
+[node name="albedo_color" type="PanelContainer" parent="vsplit/bg/scroll/margin/box"]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="vsplit/bg/scroll/margin/box/albedo_color"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/albedo_color/vbox"]
+layout_mode = 2
+
+[node name="checkbox_label" type="CheckBox" parent="vsplit/bg/scroll/margin/box/albedo_color/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Albedo"
+
+[node name="_vsep" type="VSeparator" parent="vsplit/bg/scroll/margin/box/albedo_color/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/albedo_color/vbox/hbox"]
+layout_mode = 2
+focus_mode = 0
+icon = SubResource("ImageTexture_xuwnn")
+flat = true
+script = ExtResource("2_ufe5u")
+param_type = 1
+
+[node name="color_picker" type="ColorPickerButton" parent="vsplit/bg/scroll/margin/box/albedo_color/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Color"
+color = Color(1, 1, 1, 1)
+
+[node name="metallic_specular_slider" type="PanelContainer" parent="vsplit/bg/scroll/margin/box"]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="vsplit/bg/scroll/margin/box/metallic_specular_slider"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/metallic_specular_slider/vbox"]
+layout_mode = 2
+
+[node name="checkbox_label" type="CheckBox" parent="vsplit/bg/scroll/margin/box/metallic_specular_slider/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Specular"
+
+[node name="_vsep" type="VSeparator" parent="vsplit/bg/scroll/margin/box/metallic_specular_slider/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/metallic_specular_slider/vbox/hbox"]
+layout_mode = 2
+icon = SubResource("ImageTexture_xuwnn")
+flat = true
+script = ExtResource("2_ufe5u")
+default_value = 0.5
+
+[node name="slider" type="HSlider" parent="vsplit/bg/scroll/margin/box/metallic_specular_slider/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="spinbox" type="SpinBox" parent="vsplit/bg/scroll/margin/box/metallic_specular_slider/vbox/hbox"]
+layout_mode = 2
+theme_override_icons/updown = SubResource("ImageTexture_c51gv")
+max_value = 1.0
+step = 0.01
+value = 0.5
+alignment = 1
+
+[node name="metallic_slider" type="PanelContainer" parent="vsplit/bg/scroll/margin/box"]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="vsplit/bg/scroll/margin/box/metallic_slider"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/metallic_slider/vbox"]
+layout_mode = 2
+
+[node name="checkbox_label" type="CheckBox" parent="vsplit/bg/scroll/margin/box/metallic_slider/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Metallic"
+
+[node name="_vsep" type="VSeparator" parent="vsplit/bg/scroll/margin/box/metallic_slider/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/metallic_slider/vbox/hbox"]
+layout_mode = 2
+icon = SubResource("ImageTexture_xuwnn")
+flat = true
+script = ExtResource("2_ufe5u")
+
+[node name="slider" type="HSlider" parent="vsplit/bg/scroll/margin/box/metallic_slider/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+
+[node name="spinbox" type="SpinBox" parent="vsplit/bg/scroll/margin/box/metallic_slider/vbox/hbox"]
+layout_mode = 2
+theme_override_icons/updown = SubResource("ImageTexture_c51gv")
+max_value = 1.0
+step = 0.01
+alignment = 1
+
+[node name="roughness_slider" type="PanelContainer" parent="vsplit/bg/scroll/margin/box"]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="vsplit/bg/scroll/margin/box/roughness_slider"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/roughness_slider/vbox"]
+layout_mode = 2
+
+[node name="checkbox_label" type="CheckBox" parent="vsplit/bg/scroll/margin/box/roughness_slider/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Roughness"
+
+[node name="_vsep" type="VSeparator" parent="vsplit/bg/scroll/margin/box/roughness_slider/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/roughness_slider/vbox/hbox"]
+layout_mode = 2
+icon = SubResource("ImageTexture_xuwnn")
+flat = true
+script = ExtResource("2_ufe5u")
+default_value = 1.0
+
+[node name="slider" type="HSlider" parent="vsplit/bg/scroll/margin/box/roughness_slider/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="spinbox" type="SpinBox" parent="vsplit/bg/scroll/margin/box/roughness_slider/vbox/hbox"]
+layout_mode = 2
+theme_override_icons/updown = SubResource("ImageTexture_njxyl")
+max_value = 1.0
+step = 0.01
+value = 1.0
+alignment = 1
+
+[node name="normal_scale_slider" type="PanelContainer" parent="vsplit/bg/scroll/margin/box"]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="vsplit/bg/scroll/margin/box/normal_scale_slider"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/normal_scale_slider/vbox"]
+layout_mode = 2
+
+[node name="checkbox_label" type="CheckBox" parent="vsplit/bg/scroll/margin/box/normal_scale_slider/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Normal Scale"
+
+[node name="_vsep" type="VSeparator" parent="vsplit/bg/scroll/margin/box/normal_scale_slider/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/normal_scale_slider/vbox/hbox"]
+layout_mode = 2
+icon = SubResource("ImageTexture_xuwnn")
+flat = true
+script = ExtResource("2_ufe5u")
+
+[node name="slider" type="HSlider" parent="vsplit/bg/scroll/margin/box/normal_scale_slider/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -16.0
+max_value = 16.0
+step = 0.1
+
+[node name="spinbox" type="SpinBox" parent="vsplit/bg/scroll/margin/box/normal_scale_slider/vbox/hbox"]
+layout_mode = 2
+theme_override_icons/updown = SubResource("ImageTexture_njxyl")
+max_value = 1.0
+step = 0.01
+alignment = 1
+
+[node name="disable_pbr" type="PanelContainer" parent="vsplit/bg/scroll/margin/box"]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="vsplit/bg/scroll/margin/box/disable_pbr"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/disable_pbr/vbox"]
+layout_mode = 2
+
+[node name="checkbox_label" type="CheckBox" parent="vsplit/bg/scroll/margin/box/disable_pbr/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Disable PBR"
+
+[node name="expand_tip" type="Button" parent="vsplit/bg/scroll/margin/box/disable_pbr/vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 8
+toggle_mode = true
+text = "▼"
+
+[node name="label" type="Label" parent="vsplit/bg/scroll/margin/box/disable_pbr/vbox"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xgxd8")
+text = "Set specular, metallic, roughness, normal_scale ... to 0"
+
+[node name="_theme2" type="Label" parent="vsplit/bg/scroll/margin/box"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_letxw")
+text = "Mix"
+vertical_alignment = 1
+
+[node name="transparency_mode" type="PanelContainer" parent="vsplit/bg/scroll/margin/box"]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="vsplit/bg/scroll/margin/box/transparency_mode"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/transparency_mode/vbox"]
+layout_mode = 2
+
+[node name="checkbox_label" type="CheckBox" parent="vsplit/bg/scroll/margin/box/transparency_mode/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Transparency Mode"
+
+[node name="_vsep" type="VSeparator" parent="vsplit/bg/scroll/margin/box/transparency_mode/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/transparency_mode/vbox/hbox"]
+layout_mode = 2
+icon = SubResource("ImageTexture_xuwnn")
+flat = true
+script = ExtResource("2_ufe5u")
+param_type = 2
+default_value = 2.0
+
+[node name="buttons_hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/transparency_mode/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.65
+
+[node name="depth_pre_pass" type="Button" parent="vsplit/bg/scroll/margin/box/transparency_mode/vbox/hbox/buttons_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Depth"
+clip_text = true
+
+[node name="alpha" type="Button" parent="vsplit/bg/scroll/margin/box/transparency_mode/vbox/hbox/buttons_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Alpha"
+clip_text = true
+
+[node name="disabled" type="Button" parent="vsplit/bg/scroll/margin/box/transparency_mode/vbox/hbox/buttons_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_pressed = true
+text = "Disabled"
+clip_text = true
+
+[node name="cull_mode" type="PanelContainer" parent="vsplit/bg/scroll/margin/box"]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="vsplit/bg/scroll/margin/box/cull_mode"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/cull_mode/vbox"]
+layout_mode = 2
+
+[node name="checkbox_label" type="CheckBox" parent="vsplit/bg/scroll/margin/box/cull_mode/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cull Mode"
+
+[node name="_vsep" type="VSeparator" parent="vsplit/bg/scroll/margin/box/cull_mode/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/cull_mode/vbox/hbox"]
+layout_mode = 2
+icon = SubResource("ImageTexture_xuwnn")
+flat = true
+script = ExtResource("2_ufe5u")
+param_type = 2
+
+[node name="buttons_hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/cull_mode/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.65
+
+[node name="back" type="Button" parent="vsplit/bg/scroll/margin/box/cull_mode/vbox/hbox/buttons_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Back"
+clip_text = true
+
+[node name="front" type="Button" parent="vsplit/bg/scroll/margin/box/cull_mode/vbox/hbox/buttons_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Front"
+clip_text = true
+
+[node name="disabled" type="Button" parent="vsplit/bg/scroll/margin/box/cull_mode/vbox/hbox/buttons_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Disabled"
+clip_text = true
+
+[node name="for_surface" type="PanelContainer" parent="vsplit/bg/scroll/margin/box"]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="vsplit/bg/scroll/margin/box/for_surface"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/for_surface/vbox"]
+layout_mode = 2
+
+[node name="checkbox_label" type="CheckBox" parent="vsplit/bg/scroll/margin/box/for_surface/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Surface Index"
+
+[node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/for_surface/vbox/hbox"]
+layout_mode = 2
+icon = SubResource("ImageTexture_xuwnn")
+flat = true
+script = ExtResource("2_ufe5u")
+param_type = 3
+default_value = -1.0
+
+[node name="_vsep" type="VSeparator" parent="vsplit/bg/scroll/margin/box/for_surface/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="tip" type="Label" parent="vsplit/bg/scroll/margin/box/for_surface/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0.235294)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 12
+text = "From zero"
+
+[node name="spinbox" type="SpinBox" parent="vsplit/bg/scroll/margin/box/for_surface/vbox/hbox"]
+layout_mode = 2
+theme_override_icons/updown = SubResource("ImageTexture_njxyl")
+min_value = -1.0
+max_value = 99999.0
+value = -1.0
+alignment = 1
+
+[node name="for_surfaces_up_to" type="PanelContainer" parent="vsplit/bg/scroll/margin/box"]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="vsplit/bg/scroll/margin/box/for_surfaces_up_to"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/for_surfaces_up_to/vbox"]
+layout_mode = 2
+
+[node name="checkbox_label" type="CheckBox" parent="vsplit/bg/scroll/margin/box/for_surfaces_up_to/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Surfaces up to"
+
+[node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/for_surfaces_up_to/vbox/hbox"]
+layout_mode = 2
+icon = SubResource("ImageTexture_xuwnn")
+flat = true
+script = ExtResource("2_ufe5u")
+param_type = 3
+default_value = -1.0
+
+[node name="_vsep" type="VSeparator" parent="vsplit/bg/scroll/margin/box/for_surfaces_up_to/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="tip" type="Label" parent="vsplit/bg/scroll/margin/box/for_surfaces_up_to/vbox/hbox"]
+self_modulate = Color(1, 1, 1, 0.235294)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 12
+text = "From zero"
+
+[node name="spinbox" type="SpinBox" parent="vsplit/bg/scroll/margin/box/for_surfaces_up_to/vbox/hbox"]
+layout_mode = 2
+theme_override_icons/updown = SubResource("ImageTexture_njxyl")
+min_value = -1.0
+max_value = 99999.0
+value = -1.0
+alignment = 1
+
+[node name="_empty" type="Control" parent="vsplit/bg/scroll/margin/box"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="strict_mode" type="PanelContainer" parent="vsplit/bg/scroll/margin/box"]
+layout_mode = 2
+
+[node name="vbox" type="VBoxContainer" parent="vsplit/bg/scroll/margin/box/strict_mode"]
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="vsplit/bg/scroll/margin/box/strict_mode/vbox"]
+layout_mode = 2
+
+[node name="checkbox_label" type="CheckBox" parent="vsplit/bg/scroll/margin/box/strict_mode/vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Strict Mode"
+
+[node name="label" type="RichTextLabel" parent="vsplit/bg/scroll/margin/box/strict_mode/vbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xgxd8")
+text = "• Scans the material_overlay variable in particles
+• Clear normal, ao, rim, emission and other textures when disable PBR"
+fit_content = true
+selection_enabled = true
+
+[node name="text_edit" type="TextEdit" parent="vsplit"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 15
+tooltip_text = "Examples:
+\"roughness=0\" (float)
+\"albedo_color=478cc0\" (color)
+\"albedo_texture=res://icon.png\" (Texture)
+\"emission_enabled=true\" (bool)
+\"uv1_offset=1, 1, 1\" (Vector3)"
+placeholder_text = "disable_pbr; transparency_mode disabled; for_surfaces 10; roughness 0.5"
+caret_blink = true
+
+[node name="apply" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Apply"
+
+[connection signal="pressed" from="mode/vbox/hbox/reset" to="vsplit/bg/scroll/margin/box/roughness_slider" method="_on_Roughness_Reset_pressed"]
+[connection signal="pressed" from="path/vbox/hbox/reset" to="vsplit/bg/scroll/margin/box/roughness_slider" method="_on_Roughness_Reset_pressed"]
+[connection signal="pressed" from="vsplit/bg/scroll/margin/box/albedo_color/vbox/hbox/reset" to="vsplit/bg/scroll/margin/box/albedo_color" method="_on_Color_Reset_pressed"]
+[connection signal="color_changed" from="vsplit/bg/scroll/margin/box/albedo_color/vbox/hbox/color_picker" to="vsplit/bg/scroll/margin/box/albedo_color" method="_on_ColorPickerButton_color_changed"]
+[connection signal="pressed" from="vsplit/bg/scroll/margin/box/metallic_specular_slider/vbox/hbox/reset" to="vsplit/bg/scroll/margin/box/metallic_specular_slider" method="_on_Specular_Reset_pressed"]
+[connection signal="value_changed" from="vsplit/bg/scroll/margin/box/metallic_specular_slider/vbox/hbox/slider" to="vsplit/bg/scroll/margin/box/metallic_specular_slider" method="_on_Specular_Slider_value_changed"]
+[connection signal="value_changed" from="vsplit/bg/scroll/margin/box/metallic_specular_slider/vbox/hbox/spinbox" to="vsplit/bg/scroll/margin/box/metallic_specular_slider" method="_on_Specular_SpinBox_value_changed"]
+[connection signal="pressed" from="vsplit/bg/scroll/margin/box/roughness_slider/vbox/hbox/reset" to="vsplit/bg/scroll/margin/box/roughness_slider" method="_on_Roughness_Reset_pressed"]
+[connection signal="value_changed" from="vsplit/bg/scroll/margin/box/roughness_slider/vbox/hbox/slider" to="vsplit/bg/scroll/margin/box/roughness_slider" method="_on_Roughness_Slider_value_changed"]
+[connection signal="value_changed" from="vsplit/bg/scroll/margin/box/roughness_slider/vbox/hbox/spinbox" to="vsplit/bg/scroll/margin/box/roughness_slider" method="_on_Roughness_SpinBox_value_changed"]
+[connection signal="pressed" from="vsplit/bg/scroll/margin/box/normal_scale_slider/vbox/hbox/reset" to="vsplit/bg/scroll/margin/box/normal_scale_slider" method="_on_Roughness_Reset_pressed"]
+[connection signal="value_changed" from="vsplit/bg/scroll/margin/box/normal_scale_slider/vbox/hbox/slider" to="vsplit/bg/scroll/margin/box/normal_scale_slider" method="_on_Roughness_Slider_value_changed"]
+[connection signal="value_changed" from="vsplit/bg/scroll/margin/box/normal_scale_slider/vbox/hbox/spinbox" to="vsplit/bg/scroll/margin/box/normal_scale_slider" method="_on_Roughness_SpinBox_value_changed"]
+[connection signal="pressed" from="vsplit/bg/scroll/margin/box/transparency_mode/vbox/hbox/reset" to="vsplit/bg/scroll/margin/box/roughness_slider" method="_on_Roughness_Reset_pressed"]
+[connection signal="pressed" from="vsplit/bg/scroll/margin/box/cull_mode/vbox/hbox/reset" to="vsplit/bg/scroll/margin/box/roughness_slider" method="_on_Roughness_Reset_pressed"]
+[connection signal="pressed" from="vsplit/bg/scroll/margin/box/for_surface/vbox/hbox/reset" to="vsplit/bg/scroll/margin/box/roughness_slider" method="_on_Roughness_Reset_pressed"]
+[connection signal="value_changed" from="vsplit/bg/scroll/margin/box/for_surface/vbox/hbox/spinbox" to="vsplit/bg/scroll/margin/box/roughness_slider" method="_on_Roughness_SpinBox_value_changed"]
+[connection signal="pressed" from="vsplit/bg/scroll/margin/box/for_surfaces_up_to/vbox/hbox/reset" to="vsplit/bg/scroll/margin/box/roughness_slider" method="_on_Roughness_Reset_pressed"]
+[connection signal="value_changed" from="vsplit/bg/scroll/margin/box/for_surfaces_up_to/vbox/hbox/spinbox" to="vsplit/bg/scroll/margin/box/roughness_slider" method="_on_Roughness_SpinBox_value_changed"]
+[connection signal="pressed" from="apply" to="." method="_on_Modify_pressed"]
