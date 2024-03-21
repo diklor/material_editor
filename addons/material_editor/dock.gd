@@ -255,10 +255,6 @@ func apply() -> void:
 	# Index 1 in changes array is new value, 'do' method must be before 'undo'
 	editor_undoredo.add_undo_method(self, &'_back_material_value', changes_dict, 0)
 	# Index 0 in changes array is old value (in '_back_material_value' function)
-	for material_object: BaseMaterial3D in materials:
-		if (material_object == null):		continue
-		editor_undoredo.add_undo_reference(material_object)
-		#If you accidentally clear material
 	
 	editor_undoredo.commit_action(true)
 
