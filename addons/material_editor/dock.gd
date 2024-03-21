@@ -76,9 +76,9 @@ func _ready() -> void:
 				_press_cont_button(transparency_mode_buttons, v.name)
 				transparency_mode = v.name
 			)
-		for v: Button in transparency_mode_buttons.get_children():
+		for v: Button in cull_mode_buttons.get_children():
 			v.pressed.connect(func() -> void:
-				_press_cont_button(transparency_mode_buttons, v.name)
+				_press_cont_button(cull_mode_buttons, v.name)
 				cull_mode = v.name
 			)
 	
@@ -221,7 +221,7 @@ func apply() -> void:
 			_add_material_change(material_object, 'transparency', BaseMaterial3D['TRANSPARENCY_'  + transparency_mode.to_upper()], changes_dict)
 			#TRANSPARENCY_DISABLED, TRANSPARENCY_DEPTH_PRE_PASS ...
 		if box.get_node('cull_mode/vbox/hbox/checkbox_label').button_pressed:
-			_add_material_change(material_object, 'cull_mode', BaseMaterial3D['CULL_'  + cull_mode.to_upper()], changes_dict)
+			_add_material_change(material_object, 'cull_mode', BaseMaterial3D['CULL_MODE_'  + cull_mode.to_upper()], changes_dict)
 			#CULL_DISABLED, CULL_BACK ...
 		
 		
