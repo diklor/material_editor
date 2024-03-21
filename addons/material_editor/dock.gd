@@ -221,7 +221,7 @@ func apply() -> void:
 			_add_material_change(material_object, 'transparency', BaseMaterial3D['TRANSPARENCY_'  + transparency_mode.to_upper()], changes_dict)
 			#TRANSPARENCY_DISABLED, TRANSPARENCY_DEPTH_PRE_PASS ...
 		if box.get_node('cull_mode/vbox/hbox/checkbox_label').button_pressed:
-			_add_material_change(material_object, 'cull_mode', BaseMaterial3D['CULL_MODE_'  + cull_mode.to_upper()], changes_dict)
+			_add_material_change(material_object, 'cull_mode', BaseMaterial3D['CULL_'  + cull_mode.to_upper()], changes_dict)
 			#CULL_DISABLED, CULL_BACK ...
 		
 		
