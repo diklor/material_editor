@@ -15,5 +15,7 @@ data_*/
 mono_crash.*.json
 
 # Plugin
+README.md
+LICENSE
 icon.png
 preview.png
