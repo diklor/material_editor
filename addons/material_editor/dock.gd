@@ -39,13 +39,6 @@ var plugin_script: EditorPlugin
 #Set from script plugin.gd
 
 
-func _press_cont_button(cont: BoxContainer, button_name: String) -> void: #like radio button
-	for v: Button in cont.get_children():
-		v.set_pressed_no_signal(false)
-	
-	cont.get_node(button_name).set_pressed_no_signal(true)
-
-
 
 func _on_expand_tip_pressed(in_vbox: VBoxContainer) -> void:
 	var is_pressed: bool = in_vbox.get_node('expand_tip').button_pressed
@@ -55,32 +48,18 @@ func _on_expand_tip_pressed(in_vbox: VBoxContainer) -> void:
 
 
 func _ready() -> void:
-	_press_cont_button(up_hbox.get_node('buttons_hbox'), 'selected_objects')
-	_press_cont_button(transparency_mode_buttons, 'disabled')
-	_press_cont_button(cull_mode_buttons, 'back')
-	
 	if 1:
-		#for p: Node in ([up_hbox.get_node('buttons_hbox'), transparency_mode_buttons, cull_mode_buttons] as Array[Node]):
-			#for v: Button in p.get_children():
-				#v.pressed.connect(func() -> void:
-					#_press_cont_button(up_hbox.get_node('buttons_hbox'), v.name)
-					#self[p.name] = v.name
-				#)
 		for v: Button in up_hbox.get_node('buttons_hbox').get_children():
-			v.pressed.connect(func() -> void:
-				_press_cont_button(up_hbox.get_node('buttons_hbox'), v.name)
-				mode = v.name
-			)
+			v.pressed.connect(func() -> void:		mode = v.name )
 		for v: Button in transparency_mode_buttons.get_children():
-			v.pressed.connect(func() -> void:
-				_press_cont_button(transparency_mode_buttons, v.name)
-				transparency_mode = v.name
-			)
+			v.pressed.connect(func() -> void:		transparency_mode = v.name )
 		for v: Button in cull_mode_buttons.get_children():
-			v.pressed.connect(func() -> void:
-				_press_cont_button(cull_mode_buttons, v.name)
-				cull_mode = v.name
-			)
+			v.pressed.connect(func() -> void:		cull_mode = v.name )
+	
+	up_hbox.get_node('buttons_hbox').get_node('selected_objects').button_pressed = true
+	transparency_mode_buttons.get_node('disabled').button_pressed = true
+	cull_mode_buttons.get_node('back').button_pressed = true
+	
 	
 	if 1:
 		_on_expand_tip_pressed(path_vbox)
@@ -255,6 +234,10 @@ func apply() -> void:
 	# Index 1 in changes array is new value, 'do' method must be before 'undo'
 	editor_undoredo.add_undo_method(self, &'_back_material_value', changes_dict, 0)
 	# Index 0 in changes array is old value (in '_back_material_value' function)
+	for material_object: BaseMaterial3D in materials:
+		if (material_object == null):		continue
+		editor_undoredo.add_undo_reference(material_object)
+		#If you accidentally clear material
 	
 	editor_undoredo.commit_action(true)
 

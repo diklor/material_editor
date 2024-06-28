@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dk0de8t86hkrx"]
+[gd_scene load_steps=13 format=3 uid="uid://dk0de8t86hkrx"]
 
 [ext_resource type="Script" path="res://addons/material_editor/dock.gd" id="1_cxyog"]
 [ext_resource type="Script" path="res://addons/material_editor/reset_button.gd" id="2_ufe5u"]
@@ -6,7 +6,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4girr"]
 content_margin_left = 22.0
 
-[sub_resource type="Image" id="Image_54hud"]
+[sub_resource type="Image" id="Image_b2ica"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -15,8 +15,10 @@ data = {
 "width": 16
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_tqgc4"]
-image = SubResource("Image_54hud")
+[sub_resource type="ImageTexture" id="ImageTexture_m12ga"]
+image = SubResource("Image_b2ica")
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_1ih3w"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xgxd8"]
 content_margin_left = 22.0
@@ -39,6 +41,10 @@ border_blend = true
 [sub_resource type="ImageTexture" id="ImageTexture_c51gv"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_njxyl"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_rpgb7"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_oi6qh"]
 
 [node name="Material Editor" type="VBoxContainer"]
 anchors_preset = 15
@@ -67,7 +73,7 @@ text = "Mode"
 [node name="reset" type="Button" parent="mode/vbox/hbox"]
 layout_mode = 2
 size_flags_horizontal = 10
-icon = SubResource("ImageTexture_tqgc4")
+icon = SubResource("ImageTexture_m12ga")
 flat = true
 script = ExtResource("2_ufe5u")
 
@@ -85,6 +91,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
 button_pressed = true
+button_group = SubResource("ButtonGroup_1ih3w")
 text = "Selected objects"
 clip_text = true
 
@@ -92,6 +99,7 @@ clip_text = true
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_1ih3w")
 text = "From file"
 clip_text = true
 
@@ -99,6 +107,7 @@ clip_text = true
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_1ih3w")
 text = "Folders"
 clip_text = true
 
@@ -106,6 +115,7 @@ clip_text = true
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_1ih3w")
 text = "Folders and descendants"
 clip_text = true
 
@@ -126,7 +136,7 @@ text = "Path(s)"
 
 [node name="reset" type="Button" parent="path/vbox/hbox"]
 layout_mode = 2
-icon = SubResource("ImageTexture_tqgc4")
+icon = SubResource("ImageTexture_m12ga")
 flat = true
 script = ExtResource("2_ufe5u")
 
@@ -228,7 +238,7 @@ layout_mode = 2
 [node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/albedo_color/vbox/hbox"]
 layout_mode = 2
 focus_mode = 0
-icon = SubResource("ImageTexture_tqgc4")
+icon = SubResource("ImageTexture_m12ga")
 flat = true
 script = ExtResource("2_ufe5u")
 param_type = 1
@@ -260,7 +270,7 @@ layout_mode = 2
 
 [node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/metallic_specular_slider/vbox/hbox"]
 layout_mode = 2
-icon = SubResource("ImageTexture_tqgc4")
+icon = SubResource("ImageTexture_m12ga")
 flat = true
 script = ExtResource("2_ufe5u")
 default_value = 0.5
@@ -301,7 +311,7 @@ layout_mode = 2
 
 [node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/metallic_slider/vbox/hbox"]
 layout_mode = 2
-icon = SubResource("ImageTexture_tqgc4")
+icon = SubResource("ImageTexture_m12ga")
 flat = true
 script = ExtResource("2_ufe5u")
 
@@ -339,7 +349,7 @@ layout_mode = 2
 
 [node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/roughness_slider/vbox/hbox"]
 layout_mode = 2
-icon = SubResource("ImageTexture_tqgc4")
+icon = SubResource("ImageTexture_m12ga")
 flat = true
 script = ExtResource("2_ufe5u")
 default_value = 1.0
@@ -380,7 +390,7 @@ layout_mode = 2
 
 [node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/normal_scale_slider/vbox/hbox"]
 layout_mode = 2
-icon = SubResource("ImageTexture_tqgc4")
+icon = SubResource("ImageTexture_m12ga")
 flat = true
 script = ExtResource("2_ufe5u")
 
@@ -456,7 +466,7 @@ layout_mode = 2
 
 [node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/transparency_mode/vbox/hbox"]
 layout_mode = 2
-icon = SubResource("ImageTexture_tqgc4")
+icon = SubResource("ImageTexture_m12ga")
 flat = true
 script = ExtResource("2_ufe5u")
 param_type = 2
@@ -471,6 +481,7 @@ size_flags_stretch_ratio = 0.65
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_rpgb7")
 text = "Depth"
 clip_text = true
 
@@ -478,6 +489,7 @@ clip_text = true
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_rpgb7")
 text = "Alpha"
 clip_text = true
 
@@ -486,6 +498,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
 button_pressed = true
+button_group = SubResource("ButtonGroup_rpgb7")
 text = "Disabled"
 clip_text = true
 
@@ -509,7 +522,7 @@ layout_mode = 2
 
 [node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/cull_mode/vbox/hbox"]
 layout_mode = 2
-icon = SubResource("ImageTexture_tqgc4")
+icon = SubResource("ImageTexture_m12ga")
 flat = true
 script = ExtResource("2_ufe5u")
 param_type = 2
@@ -524,6 +537,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
 button_pressed = true
+button_group = SubResource("ButtonGroup_oi6qh")
 text = "Back"
 clip_text = true
 
@@ -531,6 +545,7 @@ clip_text = true
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_oi6qh")
 text = "Front"
 clip_text = true
 
@@ -538,6 +553,7 @@ clip_text = true
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_oi6qh")
 text = "Disabled"
 clip_text = true
 
@@ -557,7 +573,7 @@ text = "Surface Index"
 
 [node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/for_surface/vbox/hbox"]
 layout_mode = 2
-icon = SubResource("ImageTexture_tqgc4")
+icon = SubResource("ImageTexture_m12ga")
 flat = true
 script = ExtResource("2_ufe5u")
 param_type = 3
@@ -598,7 +614,7 @@ text = "Surfaces up to"
 
 [node name="reset" type="Button" parent="vsplit/bg/scroll/margin/box/for_surfaces_up_to/vbox/hbox"]
 layout_mode = 2
-icon = SubResource("ImageTexture_tqgc4")
+icon = SubResource("ImageTexture_m12ga")
 flat = true
 script = ExtResource("2_ufe5u")
 param_type = 3
